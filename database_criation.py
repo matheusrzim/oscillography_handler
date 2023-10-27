@@ -133,13 +133,6 @@ def criar_base_nova(caminho):
             for k in range(0,len(entrada_train[0][0])):
                 entrada_train[i][j][k] = (entrada_train[i][j][k] - x_train_min)/(x_train_max - x_train_min)
     
-    #Salvar dados
-    
-    # np.save('X_test',entrada_test)
-    # np.save('y_test',saida_test)
-    # np.save('X_train',entrada_train)
-    # np.save('y_train',saida_train)
-    
     dados = ((entrada_test,saida_test),(entrada_train,saida_train))
     np.save('dados_4kHz_3D_5s_norm_pos',dados)
     return dados
